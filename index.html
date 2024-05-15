@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Turismo en Europa</title>
     <link rel="stylesheet" href="styles.css">
+     <script src="script.js"></script>
 </head>
 <header>
     <nav>
@@ -16,22 +17,27 @@
         </ul>
     </nav>
 </header>
-
-    <main>
-        <h1>Bienvenido a Tu viaje por Europa</h1>
-        <!--este es el cuadrito cheto que pide el monkey-->
-        <div class="main-content">
-            <div class="column">
-                <h2>Lugares Increíbles en Europa</h2>
-                <p>Descubre los rincones más hermosos de Europa con nuestras recomendaciones.</p>
-            </div>
-            <div class="column">
-                <img src="./img/travelBanner.jpg" alt="Travel">
-            </div>
+<main>
+  <h1>Bienvenido a Tu viaje por Europa</h1>
+  <div class="main-content">
+    <div class="column">
+      <h2>Lugares Increíbles en Europa</h2>
+      <p>Descubre los rincones más hermosos de Europa con nuestras recomendaciones.</p>
+    </div>
+    <div class="column">
+      <div class="carousel">
+        <div class="carousel-inner">
+          <img src="img/grecia.jpg" alt="Travel" class="carousel-item">
+          <img src="img/inglaterra.jpg" alt="Travel" class="carousel-item">
+          <img src="img/paris.jpg" alt="Travel" class="carousel-item">
+          <img src="img/roma.jpg" alt="Travel" class="carousel-item">
         </div>
-
-        
-    </main>
+        <button class="carousel-control prev" onclick="prev()">&#10094;</button>
+        <button class="carousel-control next" onclick="next()">&#10095;</button>
+      </div>
+    </div>
+  </div>
+</main>
 
     <footer>
         <p>&copy; 2024 europa10dias</p>
