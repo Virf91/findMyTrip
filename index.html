@@ -1,46 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Turismo en Europa</title>
-    <link rel="stylesheet" href="styles.css">
-     <script src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turismo en Europa</title>
+  <!-- Enlace a la fuente Roboto desde Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
-<header>
-    <nav>
-        <img class="logo" src="./img/logoFindMyTrip.png" alt="Logo">
-        <ul class="nav-text">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="articulo.html">Artículo</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <img class="logo" src="./img/logoFindMyTrip.png" alt="Logo">
+      <ul class="nav-text">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="articulo.html">Artículo</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
     </nav>
-</header>
-<main>
-  <h1>Bienvenido a Tu viaje por Europa</h1>
-  <div class="main-content">
-    <div class="column">
-      <h2>Lugares Increíbles en Europa</h2>
-      <p>Descubre los rincones más hermosos de Europa con nuestras recomendaciones.</p>
-    </div>
-    <div class="column">
-      <div class="carousel">
-        <div class="carousel-inner">
-          <img src="img/grecia.jpg" alt="Travel" class="carousel-item">
-          <img src="img/inglaterra.jpg" alt="Travel" class="carousel-item">
-          <img src="img/paris.jpg" alt="Travel" class="carousel-item">
-          <img src="img/roma.jpg" alt="Travel" class="carousel-item">
-        </div>
-        <button class="carousel-control prev" onclick="prev()">&#10094;</button>
-        <button class="carousel-control next" onclick="next()">&#10095;</button>
+  </header>
+  <main>
+    <h1>Bienvenido a Tu viaje por Europa</h1>
+    <div class="main-content">
+      <div class="column">
+        <h2>Lugares Increíbles en Europa</h2>
+        <p>Descubre los rincones más hermosos de Europa con nuestras recomendaciones.</p>
       </div>
     </div>
-  </div>
-</main>
-
-    <footer>
-        <p>&copy; 2024 europa10dias</p>
-    </footer>
+    <div class="carousel">
+      <div class="carousel-inner">
+        <img src="img/grecia.jpg" alt="Travel" class="carousel-item active">
+        <img src="img/inglaterra.jpg" alt="Travel" class="carousel-item">
+        <img src="img/paris.jpg" alt="Travel" class="carousel-item">
+        <img src="img/roma.jpg" alt="Travel" class="carousel-item">
+      </div>
+      <button class="carousel-control prev">&#10094;</button>
+      <button class="carousel-control next">&#10095;</button>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2024 europa10dias</p>
+  </footer>
 </body>
+
 </html>
