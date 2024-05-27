@@ -7,34 +7,50 @@ document.addEventListener("DOMContentLoaded", function () {
     contactForm.addEventListener("submit", function (e) {
       e.preventDefault();
 
+      // Obtener valores de entrada
       const nameInput = document.getElementById("name");
-      const email = document.getElementById("email").value;
-      const message = document.getElementById("message").value;
+      const emailInput = document.getElementById("email");
+      const messageInput = document.getElementById("message");
 
       const name = nameInput.value.trim();
-      const nameRegex = /^[a-zA-Z\s]{3,}$/;
+      const email = emailInput.value.trim();
+      const message = messageInput.value.trim();
 
+      // Expresiones regulares para validación
+      const nameRegex = /^[a-zA-Z\s]{3,}$/;
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      // Validación de nombre
       if (!nameRegex.test(name)) {
-        formResult.innerHTML =
-          "<p>El nombre debe contener solo letras y tener al menos 3 caracteres.</p>";
+        formResult.innerHTML = "<p>El nombre debe contener solo letras y tener al menos 3 caracteres.</p>";
         return;
       }
-      if (name && email && message) {
-        const messageHtml = `
-                  <p>Gracias por tu mensaje, ${name}.</p>
-                  <p>Nos pondremos en contacto contigo a ${email} pronto.</p>
-                  <p>Tu mensaje:</p>
-                  <p>${message}</p>
-              `;
-        formResult.innerHTML = messageHtml;
-        contactForm.reset();
-      } else {
-        formResult.innerHTML = "<p>Por favor completa todos los campos.</p>";
+
+      // Validación de correo electrónico
+      if (!emailRegex.test(email)) {
+        formResult.innerHTML = "<p>Por favor ingrese un correo electrónico válido.</p>";
+        return;
       }
+
+      // Validación de mensaje
+      if (message.length < 1) {
+        formResult.innerHTML = "<p>Por favor ingrese un mensaje.</p>";
+        return;
+      }
+
+      // Si todas las validaciones pasan
+      const messageHtml = `
+        <p>Gracias por tu mensaje, ${name}.</p>
+        <p>Nos pondremos en contacto contigo a ${email} pronto.</p>
+        <p>Tu mensaje:</p>
+        <p>${message}</p>
+      `;
+      formResult.innerHTML = messageHtml;
+      contactForm.reset();
     });
   }
 
-  // Carruse
+  // Carrusel
   let currentIndex = 0;
   const carouselItems = document.querySelectorAll(".carousel-item");
 
